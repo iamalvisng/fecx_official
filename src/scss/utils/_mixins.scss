@@ -1,0 +1,143 @@
+///
+/// Mixins
+///
+
+/// Button
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle & {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle & {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+/// Background Image
+@mixin background-image($url, $size, $position, $repeat) {
+  background-image: $url;
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+}
+
+/// Body font
+@mixin body-font() {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+@mixin header-font() {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+@mixin script-font() {
+	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+@mixin serif-font() {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/// Responsive breakpoint
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $point == md {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @else if $point == sm {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $point == xs {
+    @media only screen and (min-width: 480px) {
+      @content;
+    }
+  }
+}
+
+/// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/// Absolute Position
+@mixin abscenter ($oldBrowser:false) {
+  @if($oldBrowser) {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @else {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/// rem font size with pixel fallback
+/// not critical as we are not targeting IE8
+@function calculateRem($size, $base-fontsize) {
+  $remSize: $size / $base-fontsize;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size, $base-fontsize) {
+  font-size: $size;
+  font-size: calculateRem($size, $base-fontsize);
+}
+
+/// rem-calc
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}

@@ -1,0 +1,12 @@
+/// Restyled Primary Buttons
+.btn-primary {
+  @include button-variant(white, $brand-primary, $brand-primary);
+  @include header-font;
+}
+.btn-xl {
+  @include button-variant(white, $brand-primary, $brand-primary);
+  @include header-font;
+  border-radius: 3px;
+  @include font-size(1.8);
+  padding: 20px 40px;
+}

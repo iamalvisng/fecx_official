@@ -1,0 +1,21 @@
+{
+  "name": "fecx_official",
+  "description": "FECX official website",
+  "main": "app.js",
+  "authors": [
+    "@alvis_bp"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "www.fecx.co",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}
