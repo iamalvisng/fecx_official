@@ -5878,10 +5878,11 @@ body {
   border-color: #4AC0BC;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  border-radius: 3px;
-  font-size: 18px;
-  font-size: 1.8rem;
-  padding: 20px 40px; }
+  border-radius: 25px;
+  font-size: 15px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 12.5px 40px; }
   .btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active,
   .open .dropdown-toggle .btn-xl {
     color: white;
@@ -5954,6 +5955,16 @@ body {
     .navbar-default.navbar-shrink .navbar-brand {
       font-size: 1.5em; } }
 
+.navigation .navbar-toggle {
+  margin-top: 15px; }
+
+img.navigation__home--logo {
+  width: 40%;
+  height: auto; }
+
+.navigation .navbar-collapse {
+  margin-top: 20px; }
+
 header {
   background-image: url("/images/header-bg.jpg");
   background-repeat: none;
@@ -5966,16 +5977,19 @@ header {
     padding-top: 100px;
     padding-bottom: 50px; }
     header .intro-text .intro-lead-in {
-      font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-style: italic;
+      font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 22px;
+      font-size: 2.2rem;
       line-height: 22px;
       margin-bottom: 25px; }
     header .intro-text .intro-heading {
       font-family: 'Open Sans', sans-serif;
       font-weight: 600;
+      font-size: 35px;
+      font-size: 3.5rem;
+      text-transform: uppercase;
       font-weight: 700;
-      font-size: 50px;
       line-height: 50px;
       margin-bottom: 25px; }
 
@@ -6000,6 +6014,13 @@ header {
 .service-heading {
   margin: 15px 0;
   text-transform: none; }
+
+.services .services--icon {
+  width: 72px; }
+
+.services .services--caption {
+  padding-left: 25px;
+  padding-right: 25px; }
 
 #portfolio .portfolio-item {
   margin: 0 0 15px;
@@ -6053,6 +6074,9 @@ header {
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px; } }
+
+.portfolio {
+  background: #4AC0BC; }
 
 .portfolio-modal .modal-content {
   border-radius: 0;

@@ -10,16 +10,19 @@ header {
     padding-top: 100px;
     padding-bottom: 50px;
     .intro-lead-in {
-      @include serif-font();
       font-style: italic;
-      font-size: 22px;
+      @include serif-font();
+      @include font-size(2.2);
       line-height: 22px;
       margin-bottom: 25px;
     }
+    /// Heading
+    /// Let's build you dreams
     .intro-heading {
       @include header-font();
+      @include font-size(3.5);
+      text-transform: uppercase;
       font-weight: 700;
-      font-size: 50px;
       line-height: 50px;
       margin-bottom: 25px;
     }
