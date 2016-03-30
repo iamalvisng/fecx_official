@@ -40,16 +40,17 @@
     .portfolio-caption {
       max-width: 400px;
       margin: 0 auto;
-      background-color: white;
+      // background-color: white;
       text-align: center;
       padding: 25px;
-      h4 {
-        text-transform: none;
-        margin: 0;
-      }
+      // h4 {
+      //   text-transform: none;
+      //   margin: 0;
+      // }
       p {
         @include serif-font();
-        font-style: italic;
+        color: $light-green;
+        // font-style: italic;
         font-size: 16px;
         margin: 0;
       }
@@ -69,6 +70,20 @@
 
 .portfolio {
   background: $brand-primary;
+  height: 1000px;
+}
+
+.portfolio__header--white {
+  color: $brand-secondary;
+}
+
+.portfolio__header--lightgreen {
+  color: $light-green;
+}
+
+.portfolio__item--thumbnail {
+  display: block;
+  margin: auto;
 }
 
 /// Portfolio Modal

@@ -176,3 +176,32 @@
     }
   }
 }
+
+/// About section
+
+/// Mobile
+.about {
+  position: relative;
+}
+
+.about-wrap {
+  width: 80%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: $brand-secondary;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/// Desktop
+@media(min-width: 1200px) {
+  .about {
+    height: 1500px;
+  }
+
+  .about-wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

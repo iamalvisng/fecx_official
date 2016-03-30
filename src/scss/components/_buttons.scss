@@ -11,3 +11,25 @@
   text-transform: uppercase;
   padding: 12.5px 40px;
 }
+.portfolio--button {
+  display: block;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  @include button-variant($brand-primary, $brand-secondary, $brand-secondary);
+  @include header-font;
+  @include font-size(1.5);
+  border-radius: 25px;
+  text-transform: uppercase;
+  padding: 12.5px 40px;
+
+  &.active,
+  &:active,
+  &:focus,
+  &:hover,
+  .open .dropdown-toggle & {
+    color: $brand-secondary;
+    background-color: $light-green!important;
+    border-color: $light-green!important;
+  }
+}

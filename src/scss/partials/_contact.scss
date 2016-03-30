@@ -1,7 +1,7 @@
 // Contact Section
 section#contact {
-  background-color: $gray-darkest;
-  background-image: url('/images/map-image.png');
+  // background-color: $gray-darkest;
+  // background-image: url('/images/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
   .section-heading {
@@ -45,4 +45,12 @@ section#contact {
   .text-danger {
     color: $brand-danger;
   }
+}
+
+.contact__header--heading {
+  color: $gray-darkest!important;
+}
+
+.contact {
+  padding-top: 0;
 }
